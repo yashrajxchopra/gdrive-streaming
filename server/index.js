@@ -35,6 +35,45 @@ app.get('/api/getVideos', async (req, res) => {
       }
 });
 
+app.get('/api/:id', async (req, res) => {
+  const videoSrc = `https://drive.google.com/file/d/${req.params.id}/preview`;
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Video Player</title>
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f0f0f0;
+        }
+        .video-player-container {
+          width: 80%;
+          max-width: 800px;
+        }
+        iframe {
+          width: 100%;
+          height: 480px;
+          border: none;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="video-player-container">
+        <iframe src="${videoSrc}" allow="autoplay"></iframe>
+      </div>
+    </body>
+    </html>
+  `);
+
+})
+
 
 
 

@@ -10,7 +10,7 @@ const Home = () => {
   const [videos, setVideos] = useState([]);
   
   const folders = [
-    { name: 'DocumentsDocumentsDocumentsDocumentsDocumentsDocuments' },
+    { name: 'Crayon+Shin-chan_Hungama+2006_Hindi+Uncut' },
     { name: 'Pictures' },
     { name: 'Music' },
     { name: 'Videos' },

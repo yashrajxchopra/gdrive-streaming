@@ -1,0 +1,10 @@
+/* VideoPlayer.css */
+.video-player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust to fit the container */
+    background: #000; /* Background color behind the video */
+    padding: 20px;
+  }
+  
