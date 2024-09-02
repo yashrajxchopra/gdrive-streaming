@@ -1,0 +1,62 @@
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.folder{
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Example font size */
+
+}
+.image-container {
+    width: 300px;  
+    height: 200px;
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Position the container for the image */
+    cursor: pointer;
+  }
+  
+  .image-container img {
+    width: 100%;   /* Make the image fill the width of the div */
+    height: 100%;  /* Make the image fill the height of the div */
+    object-fit: cover; /* Ensure the image covers the div without distortion */
+    display: block; /* Remove any whitespace around the image */
+    position: absolute; /* Keep the image positioned within the div */
+    top: 0;
+    left: 0;
+  }
+  
+  .folder-lname {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    width: 300px;
+    overflow: hidden; /* Hide the overflowing text */
+    position: relative;
+    white-space: nowrap;
+  }
+  .folder-sname {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    width: 300px;
+    overflow: hidden; /* Hide the overflowing text */
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .folder-lname span {
+    display: inline-block;
+    transform: translateX(0); /* Start at the beginning of the text */
+    transition: transform 5s; /* Smooth scrolling effect */
+  }
+  
+  .folder-lname:hover span {
+    transform: translateX(-100%); /* Scroll to reveal the full text */
+  }
+  
